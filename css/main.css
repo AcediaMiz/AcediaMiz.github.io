@@ -295,6 +295,7 @@ h6 {
   padding: 0 0 60% 0;
   width: 50%;
   max-width: 440px;
+  max-height: 576px;
   background-image: url(/img/p1.png);
   background-position: center;
   background-size: cover;
