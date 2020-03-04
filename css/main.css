@@ -294,6 +294,7 @@ h6 {
 .yoga-tour__img {
   padding: 0 0 60% 0;
   width: 50%;
+  max-width: 440px;
   background-image: url(/img/p1.png);
   background-position: center;
   background-size: cover;
