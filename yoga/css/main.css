@@ -90,32 +90,32 @@ h6 {
 
 @font-face {
   font-family: "Muller Regular";
-  src: url(/fonts/Fontfabric-MullerRegular.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerRegular.otf);
 }
 
 @font-face {
   font-family: "Muller Bold";
-  src: url(/fonts/Fontfabric-MullerBold.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerBold.otf);
 }
 
 @font-face {
   font-family: "Muller Medium";
-  src: url(/fonts/Fontfabric-MullerMedium.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerMedium.otf);
 }
 
 @font-face {
   font-family: "Muller Light";
-  src: url(/fonts/Fontfabric-MullerLight.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerLight.otf);
 }
 
 @font-face {
   font-family: "Muller Light Italic";
-  src: url(/fonts/Fontfabric-MullerLightItalic.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerLightItalic.otf);
 }
 
 @font-face {
   font-family: "Muller Italic";
-  src: url(/fonts/Fontfabric-MullerRegularItalic.otf);
+  src: url(/yoga/fonts/Fontfabric-MullerRegularItalic.otf);
 }
 
 .wrap {
@@ -145,7 +145,7 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url(/img/Прямоугольник_2_копия_2.png);
+  background-image: url(/yoga/img/Прямоугольник_2_копия_2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -296,7 +296,7 @@ h6 {
   width: 50%;
   max-width: 440px;
   max-height: 576px;
-  background-image: url(/img/p1.png);
+  background-image: url(/yoga/img/p1.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -513,42 +513,42 @@ h6 {
 }
 
 .slider .item1 {
-  background-image: url(/img/slide1.png);
+  background-image: url(/yoga/img/slide1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider .item2 {
-  background-image: url(/img/34.png);
+  background-image: url(/yoga/img/34.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider .item3 {
-  background-image: url(/img/slide2.png);
+  background-image: url(/yoga/img/slide2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider .item4 {
-  background-image: url(/img/slide3.png);
+  background-image: url(/yoga/img/slide3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider .item5 {
-  background-image: url(/img/slide4.png);
+  background-image: url(/yoga/img/slide4.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider .item6 {
-  background-image: url(/img/slide5.png);
+  background-image: url(/yoga/img/slide5.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -827,7 +827,7 @@ h6 {
 }
 
 .aurveda-info {
-  background-image: url(/img/011.png);
+  background-image: url(/yoga/img/011.png);
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -933,7 +933,7 @@ h6 {
 }
 
 .instructors {
-  background: url(/img/bg111.png);
+  background: url(/yoga/img/bg111.png);
   background-repeat: no-repeat;
   background-size: contain;
   display: -webkit-box;
@@ -1028,7 +1028,7 @@ h6 {
   margin: auto;
   max-width: 940px;
   padding-top: 376px;
-  background-image: url(/img/slider6.png);
+  background-image: url(/yoga/img/slider6.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1096,7 +1096,7 @@ h6 {
 }
 
 .slider3 {
-  background-image: url(/img/slider7.png);
+  background-image: url(/yoga/img/slider7.png);
 }
 
 .review {
@@ -1125,7 +1125,7 @@ h6 {
 .review .slick-prev {
   font-size: 0;
   background: #fff;
-  background-image: url(/img/left.png);
+  background-image: url(/yoga/img/left.png);
   background-repeat: no-repeat;
   min-width: 20px;
   height: 25px;
@@ -1134,7 +1134,7 @@ h6 {
 .review .slick-next {
   font-size: 0;
   background: #fff;
-  background-image: url(/img/right.png);
+  background-image: url(/yoga/img/right.png);
   background-repeat: no-repeat;
   min-width: 20px;
   height: 25px;
