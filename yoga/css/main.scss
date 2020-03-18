@@ -202,9 +202,6 @@
   }
 
   // .yoga-tour__list
-
-  &__list {
-  }
 }
 .list {
   // .list__item
@@ -288,6 +285,16 @@
   }
 }
 .slider {
+  max-width: 940px;
+  height: 530px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  .slick-list {
+    padding: 0;
+    min-width: 940px;
+    min-height: 530px;
+  }
   .slick-current {
     min-width: 940px;
     min-height: 530px;
@@ -319,11 +326,7 @@
       background: rgba($color: #000000, $alpha: 0.4);
     }
   }
-  position: relative;
-  //top: -407px;
-  width: 1320px;
-  max-height: 530px;
-  margin: auto;
+
   .item1 {
     background-image: url(https://acediamiz.github.io//yoga/img/slide1.png);
     background-position: center;

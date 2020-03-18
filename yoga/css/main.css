@@ -461,10 +461,17 @@ h6 {
 }
 
 .slider {
+  max-width: 940px;
+  height: 530px;
   position: relative;
-  width: 1320px;
-  max-height: 530px;
+  overflow: hidden;
   margin: auto;
+}
+
+.slider .slick-list {
+  padding: 0;
+  min-width: 940px;
+  min-height: 530px;
 }
 
 .slider .slick-current {
