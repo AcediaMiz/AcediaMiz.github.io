@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Muller Medium";
-  src: url(G:/Projects/Йога/fonts/Fontfabric-MullerMedium.otf);
+  src: url(/fonts/Fontfabric-MullerMedium.otf);
 }
 @font-face {
   font-family: "Muller Light";
@@ -147,6 +147,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
   // .yoga-tour__img
   &__body {
     margin: 50px 0;
@@ -157,19 +162,15 @@
     max-height: 590px;
   }
   &__img {
-    padding: 0 0 60% 0;
+    min-height: 100%;
     width: 50%;
-    background-image: url(/img/p1.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   // .yoga-tour__column
 
   &__column {
     margin-left: 80px;
-    width: 50%;
+    //width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
