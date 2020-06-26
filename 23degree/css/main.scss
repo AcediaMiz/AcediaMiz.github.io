@@ -235,7 +235,7 @@ body {
     height: 100%;
     top: 0;
     right: -200px;
-    opacity: 0;
+    visibility: hidden;
     z-index: -1;
     &.active {
       position: fixed;
