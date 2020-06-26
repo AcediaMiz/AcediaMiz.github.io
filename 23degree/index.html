@@ -8,36 +8,21 @@
       rel="stylesheet"
     />
     <!--Plugin CSS file with desired skin-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
-    />
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
 
     <!--jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://acediamiz.github.io/23degree/css/main.css"
-    />
+    <link rel="stylesheet" href="/css/main.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="content">
         <div class="header__head">
-          <img
-            src="https://acediamiz.github.io/23degree/img/logo.png"
-            alt=""
-            class="header__logo"
-          />
+          <img src="/img/logo.png" alt="" class="header__logo" />
           <div class="header__block">
             <div class="header__tel">
-              <img
-                src="https://acediamiz.github.io/23degree/img/phone__pic.png"
-                alt=""
-                class="header__phone"
-              />
+              <img src="/img/phone__pic.png" alt="" class="header__phone" />
               <div class="header__number">
                 <div class="header__text header__text_1">
                   Есть вопросы? Звоните!
@@ -54,12 +39,7 @@
                 <p>menu</p>
               </div>
               <ul class="nav__list">
-                <li class="nav__ite">
-                  <img
-                    src="https://acediamiz.github.io/23degree/img/logo.png"
-                    alt=""
-                  />
-                </li>
+                <li class="nav__ite"><img src="/img/logo.png" alt="" /></li>
                 <li class="nav__item"><a href="http://"> hjfgnfg</a></li>
                 <li class="nav__item"><a href="http://"> fgngfnf</a></li>
                 <li class="nav__item"><a href="http://"> fgnfghn</a></li>
@@ -103,19 +83,12 @@
                 Оставить заявку!
               </button>
             </div>
-            <img
-              class="header__line"
-              src="https://acediamiz.github.io/23degree/img/line.png"
-              alt=""
-            />
+            <img class="header__line" src="/img/line.png" alt="" />
             <h3>*Мы гарантируем конфидициальность передаваемых данных</h3>
           </form>
         </div>
         <a href="#down" class="header__mouse">
-          <img
-            src="https://acediamiz.github.io/23degree/img/mouse.png"
-            alt=""
-          />
+          <img src="/img/mouse.png" alt="" />
         </a>
       </div>
     </header>
@@ -285,9 +258,402 @@
         </form>
       </div>
     </section>
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <section class="portfolio">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Портфолио</h2>
+          <div class="global__line"></div>
+        </div>
+        <ul class="portfolio__tabs">
+          <li id="event" class="portfolio__tab active" onclick="open1()">
+            все проекты
+          </li>
+          <li
+            id="event_1"
+            class="portfolio__tab"
+            onclick="openCity(event, 'item_1')"
+          >
+            экстерьеры
+          </li>
+          <li
+            id="event_2"
+            class="portfolio__tab"
+            onclick="openCity(event, 'item_2')"
+          >
+            жилые интерьеры
+          </li>
+          <li
+            id="event_3"
+            class="portfolio__tab"
+            onclick="openCity(event, 'item_3')"
+          >
+            общественные интерьеры
+          </li>
+        </ul>
+        <div class="portfolio__list">
+          <div id="item_1" class="portfolio__item">
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_1.png" alt="" class="portfolio__img" />
+          </div>
+          <div id="item_2" class="portfolio__item">
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_2.png" alt="" class="portfolio__img" />
+          </div>
+          <div id="item_3" class="portfolio__item">
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+            <img src="/img/portfolio_3.png" alt="" class="portfolio__img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reasons">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Почему мы лучшие?</h2>
+          <div class="global__line"></div>
+        </div>
+        <div class="reasons__block">
+          <div class="reasons__item">
+            <img src="/img/reasons_1.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Профессиональные дизайнеры и визуализаторы с зарубежной практикой
+              работы
+            </div>
+          </div>
 
-    <script src="https://acediamiz.github.io/23degree/js/menu.js"></script>
-    <script src="https://acediamiz.github.io/23degree/js/calc.js"></script>
+          <div class="reasons__item">
+            <img src="/img/reasons_2.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Интеративный подход, работаем до полного согласования с Вами
+            </div>
+          </div>
+
+          <div class="reasons__item">
+            <img src="/img/reasons_3.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Решаем вопрос закупки, берем авторский надзор на себя (пакет Full)
+            </div>
+          </div>
+
+          <div class="reasons__item">
+            <img src="/img/reasons_4.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Над проектом работает группа специалистов под началом project
+              менеджера в ERP системе
+            </div>
+          </div>
+
+          <div class="reasons__item">
+            <img src="/img/reasons_5.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Выполнение раньше установленных сроков
+            </div>
+          </div>
+
+          <div class="reasons__item">
+            <img src="/img/reasons_6.png" alt="" class="reasons__img" />
+            <div class="reasons__line"></div>
+            <div class="reasons__text">
+              Дарим альбом проекта, вместе с 25% скидкой на следующее обращение
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="process">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Процесс взаимодействия</h2>
+          <div class="global__line"></div>
+        </div>
+        <div class="process__block">
+          <img src="/img/process_1.png" alt="" class="process__img" />
+          <div class="process__text"><span>Заполнение брифа</span></div>
+
+          <div class="process__text"><span>Исследование</span></div>
+          <img src="/img/process_2.png" alt="" class="process__img" />
+
+          <img src="/img/process_3.png" alt="" class="process__img" />
+          <div class="process__text"><span>Идея</span></div>
+
+          <div class="process__text"><span>Завершение</span></div>
+          <img src="/img/process_4.png" alt="" class="process__img" />
+        </div>
+      </div>
+    </section>
+    <section class="brands">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Нам доверяют более 50 компаний</h2>
+          <div class="global__line"></div>
+        </div>
+        <div class="brands__scrolls" id="wrapper">
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_4.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_6.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_4.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_6.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_4.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_6.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_4.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_6.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_4.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_6.png" alt="" class="brands__img" />
+          <img src="/img/brands_3.png" alt="" class="brands__img" />
+          <img src="/img/brands_5.png" alt="" class="brands__img" />
+          <img src="/img/brands_1.png" alt="" class="brands__img" />
+          <img src="/img/brands_2.png" alt="" class="brands__img" />
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Наша команда</h2>
+          <div class="global__line"></div>
+        </div>
+        <div class="team__grid">
+          <div class="team__item">
+            <img src="/img/team_1.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Ирина Притыкина <span> Директор компании</span>
+            </h3>
+          </div>
+          <div class="team__item">
+            <img src="/img/team_2.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Игорь Карий
+              <span> Финансовый директор</span>
+            </h3>
+          </div>
+          <div class="team__item">
+            <img src="/img/team_3.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Илья Кондрашин
+              <span> Инженер модельер</span>
+            </h3>
+          </div>
+          <div class="team__item">
+            <img src="/img/team_4.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Маргарита Гордеева
+              <span> 3D дизайнер</span>
+            </h3>
+          </div>
+          <div class="team__item">
+            <img src="/img/team_5.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Светлана Коток
+              <span> Дизайнер интерьеров</span>
+            </h3>
+          </div>
+          <div class="team__item">
+            <img src="/img/team_6.png" alt="" class="team__img" />
+            <h3 class="team__name">
+              Максим Ковальский
+              <span> Дизайнер ландшафтов</span>
+            </h3>
+          </div>
+        </div>
+        <div class="team__text">
+          <h2 class="team__title">
+            <span>Ты - то, что ты делаешь!</span><br />
+            То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют
+            старание и чувствуют неаккуратность. Это связано с уважением друг к
+            другу, так что небрежность - это неуважение к самому себе.
+          </h2>
+          <p class="team__subtitle">
+            Ислам Куаныш <br /><span> Директор</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="content">
+        <div class="global">
+          <h2 class="global__title">Блог</h2>
+          <div class="global__line"></div>
+        </div>
+        <div class="blog_body">
+          <div class="blog__item">
+            <img src="/img/blog_1.png" alt="" class="blog__img" />
+            <a href="#" class="blog__link"
+              >Минимализм – это самый простой, практичный и «спорный» стиль в
+              дизайне интерьеров</a
+            >
+          </div>
+          <div class="blog__item">
+            <img src="/img/blog_2.png" alt="" class="blog__img" />
+            <a href="#" class="blog__link"
+              >Прованс - это спокойный южный регион Франции, с великолепнейшей
+              природой</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question">
+      <div class="content">
+        <div class="global global_1">
+          <h2 class="global__title global__title_1">Остались вопросы?</h2>
+          <div class="global__line global__line_1"></div>
+        </div>
+        <h2 class="question__title">
+          Задайте их в форме ниже и наши специалисты свяжуться с Вами!
+        </h2>
+        <div class="question__body">
+          <form action="" class="question__form">
+            <div class="question__input">
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                class="question__name"
+              />
+              <input
+                type="email"
+                placeholder="Ваш e-mail"
+                class="question__email"
+              />
+              <input
+                type="tel"
+                placeholder="Ваш номер телeфона"
+                class="question__phone"
+              />
+            </div>
+
+            <textarea
+              class="question__textarea"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Ваше сообщение"
+            ></textarea>
+            <button class="question__submit" type="submit">
+              Оставить заявку!
+            </button>
+          </form>
+          <div class="question__social">
+            <div class="question__item">
+              <div class="question__img-box">
+                <img src="/img/phone.png" alt="" class="question__img" />
+              </div>
+              <p class="question__text">+ 7 896 876 66 77</p>
+            </div>
+            <div class="question__item">
+              <div class="question__img-box">
+                <img src="/img/whatsapp.png" alt="" class="question__img" />
+              </div>
+              <p class="question__text">+ 7 896 876 66 77</p>
+            </div>
+            <div class="question__item">
+              <div class="question__img-box">
+                <img src="/img/email.png" alt="" class="question__img" />
+              </div>
+              <p class="question__text">sales@23degree.kz</p>
+            </div>
+            <div class="question__item">
+              <div class="question__img-box">
+                <img src="/img/skype.png" alt="" class="question__img" />
+              </div>
+              <p class="question__text">skype: 23degree</p>
+            </div>
+            <div class="question__item">
+              <div class="question__img-box">
+                <img src="/img/telegramm.png" alt="" class="question__img" />
+              </div>
+              <p class="question__text">telegram: 23degree</p>
+            </div>
+            <div class="question__item question__item_1">
+              График работы: с 9-00 до 18-00. Пн.-Пт.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <div class="map__block">
+       
+          
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2670.363754991258!2d37.53503229943527!3d55.74982804525782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdc191c196f%3A0x59707d763d601738!2z0JzQvtGB0LrQstCwLdCh0LjRgtC4!5e0!3m2!1sru!2sru!4v1588528288429!5m2!1sru!2sru"
+            width="100%"
+            height="600"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content">
+        <div class="footer__body">
+          <p class="footer__text">© Kazteleport, 2015. Все права защищены</p>
+          <div class="footer__img">Создание сайта - 
+            <img src="/img/footer__logo.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/calc.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/scroll.js"></script>
   </body>
 </html>
