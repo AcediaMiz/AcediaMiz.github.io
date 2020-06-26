@@ -235,9 +235,11 @@ body {
     height: 100%;
     top: 0;
     right: -200px;
-    visibility: hidden;
+    opacity: 0;
     z-index: -1;
+    display: none;
     &.active {
+      display: block;
       position: fixed;
       z-index: 10;
       opacity: 1;
