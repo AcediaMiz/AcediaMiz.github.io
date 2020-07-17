@@ -448,6 +448,7 @@ h6 {
   z-index: 100;
   width: 45px;
   height: 45px;
+  padding-left:30px;
 }
 
 .nav__close p {
