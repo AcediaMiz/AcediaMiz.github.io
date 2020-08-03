@@ -1,0 +1,52 @@
+.game__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 410px;
+  height: 410px;
+}
+
+.game__dif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.game__button {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border: 2px solid rgba(118, 204, 238, 0);
+}
+
+.game__button:hover {
+  border: 2px solid black;
+}
+
+.game__button_1 {
+  background: blue;
+  opacity: 0.4;
+}
+
+.game__button_2 {
+  background: green;
+  opacity: 0.4;
+}
+
+.game__button_3 {
+  background: yellow;
+  opacity: 0.4;
+}
+
+.game__button_4 {
+  background: red;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=main.css.map */

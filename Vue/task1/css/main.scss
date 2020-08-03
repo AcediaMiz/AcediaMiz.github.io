@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+}
+.form-block {
+  margin: auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f4f7f8;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: "Nunito", "sans-serif";
+  color: #384047;
+  h1 {
+    margin: 0 auto;
+  }
+}
+.input {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #384047;
+  input,
+  select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  }
+  input:focus,
+  select:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.reg {
+  &__sex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    label {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__sms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    input {
+      display: none;
+    }
+  }
+  // .reg__step
+  &__step {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    span {
+      background-color: #5fcf80;
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      font-size: 0.8em;
+      margin-right: 4px;
+      line-height: 30px;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+      border-radius: 100%;
+    }
+  }
+
+  &__radio {
+    width: 13px;
+    height: 13px;
+    background: #e8eeef;
+    display: block;
+    border: 5px solid #e8eeef;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-left: 10px;
+    &.active {
+      background: #4bc970;
+    }
+  }
+  &__check {
+    width: 13px;
+    height: 13px;
+    background: #e8eeef;
+    display: block;
+    border: 5px solid #e8eeef;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-left: 10px;
+    &.active {
+      background: #4bc970;
+    }
+  }
+  // .reg__surname
+  &__next {
+    padding: 19px 39px 18px 39px;
+    color: #fff;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    &:disabled {
+      background-color: #348b4e;
+      color: rgb(187, 179, 179);
+      box-shadow: 0 -1px 0 #348b4e;
+      border: 1px solid #348b4e;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__prev {
+    padding: 19px 39px 18px 39px;
+    color: #fff;
+    background-color: #8a97a0;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #8a97a0;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 1s ease;
+}
+
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.Error {
+  &::after {
+    content: attr(data-after);
+    white-space: pre;
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgba(243, 35, 35, 1);
+  }
+}
+.danger {
+  box-shadow: 0 0 5px rgba(243, 35, 35, 1);
+  border: 1px solid rgb(243, 35, 35);
+  &::after {
+    content: "Регистрация не удалась. Пожалуйста исправьте ошибки.";
+    white-space: pre;
+    height: 13px;
+    display: block;
+    font-size: 13px;
+    color: rgba(243, 35, 35, 1);
+    position: relative;
+    top: 40px;
+    border: 1px solid rgba($color: #fff, $alpha: 0);
+  }
+}

@@ -1,0 +1,58 @@
+.game {
+  // .game__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 410px;
+    height: 410px;
+  }
+
+  // .game__button
+  &__dif {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  &__button {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border: 2px solid rgba($color: #76ccee, $alpha: 0);
+
+    &:hover {
+      border: 2px solid rgba($color: #000, $alpha: 1);
+    }
+    // .game__button_0
+
+    // .game__button_1
+
+    &_1 {
+      background: blue;
+      opacity: 0.4;
+    }
+
+    // .game__button_2
+
+    &_2 {
+      background: green;
+      opacity: 0.4;
+    }
+
+    // .game__button_3
+
+    &_3 {
+      background: yellow;
+      opacity: 0.4;
+    }
+    &_4 {
+      background: red;
+      opacity: 0.4;
+    }
+  }
+
+  // .game__start
+
+  &__start {
+  }
+}

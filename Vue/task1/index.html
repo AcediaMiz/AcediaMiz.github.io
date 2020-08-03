@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-block">
+      <h1>Регистрация</h1>
+      <form
+        v-on:submit="send($event)"
+        class="reg"
+        id="vue"
+        novalidate
+        action=""
+      >
+        <transition name="slide-fade">
+          <div v-show="counter === 1" class="reg__step main">
+            <h2 class="reg__title">
+              <span>1</span>
+              Основная информация
+            </h2>
+            <label class="reg__surname input">
+              Фамилия:
+              <input
+                class="Required"
+                @input="writeInput($event)"
+                :value="formData.surname.value"
+                type="text"
+                id="surname"
+              />
+              
+            </label>
+
+            <label class="reg__name input">
+              Имя:
+              <input
+                class="Required"
+                @input="writeInput($event)"
+                :value="formData.name.value"
+                type="text"
+                id="name"
+              />
+              
+            </label>
+
+            <label class="reg__patronymic input">
+              Отчество:
+              <input
+                id="patronymic"
+                @input="writeInput($event)"
+                :value="formData.patronymic.value"
+                type="text"
+              />
+              
+            </label>
+
+            <label class="reg__dob input">
+              Дата рождения:
+              <input
+                id="dob"
+                @change="writeInput($event)"
+                :value="formData.dob.value"
+                type="date"
+                class="Required"
+              />
+              
+            </label>
+            <label class="reg__phone input">
+              Номер телефона:
+              <input
+                class="RequiredEqualFirstChar"
+                @input="writeInput($event)"
+                :value="formData.phone.value"
+                type="number"
+                id="phone"
+                data-num="11"
+                data-char="7"
+              />
+            </label>
+            <div class="reg__sex input">
+              <span>
+                Пол:
+              </span>
+              <label>
+                Мужчина
+                <div :class="{active:male}" class="reg__radio"></div>
+                <input
+                  type="radio"
+                  name="sex"
+                  value="male"
+                  v-model="formData.picked"
+                  v-on:change="radio1"
+                />
+              </label>
+
+              <label>
+                Женщина
+                <div :class="{active:female}" class="reg__radio"></div>
+                <input
+                  type="radio"
+                  name="sex"
+                  value="female"
+                  v-model="formData.picked"
+                  v-on:change="radio1"
+                />
+              </label>
+            </div>
+            <label class="reg__clients input">
+              Группа клиентов:
+              <select
+                v-model="formData.clients.value"
+                id="clients"
+                multiple
+                size="3"
+                class="Required"
+                @change="inputValidate('clients')"
+              >
+                <option>VIP</option>
+                <option>Проблемные</option>
+                <option selected>ОМС</option>
+              </select>
+              
+            </label>
+
+            <label class="reg__doctor input">
+              Лечащий врач:
+              <select
+                @input="writeInput($event)"
+                :value="formData.doctor.value"
+                id="doctor"
+              >
+                <option value="Иванов">Иванов</option>
+                <option value="Захаров">Захаров</option>
+                <option value="Чернышева">Чернышева</option>
+              </select>
+            </label>
+            <label class="reg__sms input">
+              <span>Не отправлять СМС:</span>
+              <div :class="{active:formData.cheked}" class="reg__check"></div>
+              <input type="checkbox" name="true" v-model="formData.cheked" />
+            </label>
+          </div>
+        </transition>
+
+        <transition name="slide-fade">
+          <div v-show="counter === 2" class="reg__step adress">
+            <h2 class="reg__title">
+              <span>2</span>
+              Место проживания
+            </h2>
+            <label class="reg__index input">
+              Индекс:
+              <input
+                class="MaxNum"
+                @input="writeInput($event)"
+                :value="formData.index.value"
+                type="text"
+                id="index"
+                data-num="6"
+              />
+              
+            </label>
+
+            <label class="reg__country input">
+              Страна:
+              <input
+                @input="writeInput($event)"
+                :value="formData.country.value"
+                type="text"
+                id="country"
+              />
+            </label>
+
+            <label class="reg__region input">
+              Область:
+              <input
+                @input="writeInput($event)"
+                :value="formData.region.value"
+                type="text"
+                id="region"
+              />
+            </label>
+
+            <label class="reg__city input">
+              Город:
+              <input
+                id="city"
+                @input="writeInput($event)"
+                :value="formData.city.value"
+                type="text"
+                class="Required"
+              />
+              
+            </label>
+
+            <label class="reg__street input">
+              Улица:
+              <input
+                @input="writeInput($event)"
+                :value="formData.street.value"
+                type="text"
+                id="street"
+              />
+            </label>
+
+            <label class="reg__house input">
+              Дом:
+              <input
+                @input="writeInput($event)"
+                :value="formData.house.value"
+                type="text"
+                id="house"
+              />
+            </label>
+          </div>
+        </transition>
+        <transition name="slide-fade">
+          <div v-show="counter === 3" class="reg__step passport">
+            <h2 class="reg__title">
+              <span>3</span>
+              Паспортные данные
+            </h2>
+            <label class="reg__documents input">
+              Тип документа:
+              <select
+                @input="writeInput($event)"
+                :value="formData.documents.value"
+                id="documents"
+                class="Required"
+              >
+                <option>Паспорт</option>
+                <option>Свидетельство о рождении</option>
+                <option>Вод. удостоверение</option>
+              </select>
+              
+            </label>
+            <label class="reg__series input">
+              Серия:
+              <input
+                class="MaxNum"
+                @input="writeInput($event)"
+                :value="formData.series.value"
+                type="text"
+                id="series"
+                data-num="4"
+              />
+              
+            </label>
+
+            <label class="reg__num input">
+              Номер:
+              <input
+                class="MaxNum"
+                @input="writeInput($event)"
+                :value="formData.num.value"
+                type="text"
+                id="num"
+               class="reg__issued-by input"
+               data-num='6'/>
+               
+              Кем выдан:
+              <input
+                @input="writeInput($event)"
+                :value="formData.issuedBy.value"
+                type="text"
+                class="0"
+                id="issuedBy"
+              />
+            </label>
+
+            <label class="reg__date-issure input">
+              Дата выдачи:
+              <input
+                @change="writeInput($event)"
+                :value="formData.dateIssue.value"
+                type="date"
+                class="Required"
+                id="dateIssue"
+              />
+          </div>
+        </transition>
+
+        <button
+          v-on:click="prev"
+          v-show="counter > 1"
+          type="button"
+          class="reg__prev"
+        >
+          Назад
+        </button>
+        <button 
+          v-show="counter < 3"
+          v-on:click="next"
+          type="button"
+          class="reg__next"
+        >
+          Далее
+        </button>
+        <button
+          v-show="counter === 3"
+          type="submit"
+          class="reg__next"
+          tabindex="-1"
+          
+        >
+          Зарегестрироваться
+        </button>
+      </form>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#vue",
+        data: {
+          counter: 1,
+          id: "",
+          className: "",
+          male: "",
+          female: "",
+          errorCount: 0,
+          
+
+          formData: {
+            picked: "",
+            cheked: false,
+            surname: {
+              value:'',
+              error:[false] ,
+            },
+            name: {
+              value:'',
+              error:[false] ,
+            },
+            patronymic: {
+              value:'',
+              error:[false] ,
+            },
+            dob: {
+              value:'',
+              error:[false] ,
+            },
+            phone: {
+              value:'',
+              error:[false] ,
+            },
+            index: {
+              value:'',
+              error:[false] ,
+            },
+            country: {
+              value:'',
+              error:[false] ,
+            },
+            region: {
+              value:'',
+              error:[false] ,
+            },
+            city: {
+              value:'',
+              error:[false] ,
+            },
+            street: {
+              value:'',
+              error:[false] ,
+            },
+            house: {
+              value:'',
+              error:[false] ,
+            },
+            series: {
+              value:'',
+              error:[false] ,
+            },
+            num: {
+              value:'',
+              error:[false] ,
+            },
+            issuedBy: {
+              value:'',
+              error:[false] ,
+            },
+            dateIssue: {
+              value:'',
+              error:[false] ,
+            },
+            clients: {
+              value:[],
+              error:[false] ,
+            },
+            doctor: {
+              value:'',
+              error:[false] ,
+            },
+            documents: {
+              value:'',
+              error:[false] ,
+            },
+          },
+        },
+
+        methods: {
+          radio1: function () {
+            if (this.formData.picked === "male") {
+              this.male = true;
+              this.female = false;
+            } else if (this.formData.picked === "female") {
+              this.female = true;
+              this.male = false;
+            }
+          },
+          next: function () {
+           
+            this.counter++;
+          },
+          prev: function () {
+            this.counter--;
+          },
+          disableButton(){
+            for(id in this.formData){
+              if (document.getElementById(id) != null) {
+
+                for(var i = 0;i<this.formData[id].error.length;i++){
+                  if(this.formData[id].error[i]===true){
+                    this.errorCount++;
+
+                  }
+                }
+              }
+              
+            }
+           
+          },
+          send(e) {              
+            document.getElementsByClassName('reg__next')[1].classList.remove("danger")
+           e.preventDefault();
+            for (id in this.formData) {
+              if (document.getElementById(id) != null) {
+                this.inputValidate(id);
+              }
+            }
+            this.disableButton()
+            if(this.errorCount===0){
+
+              alert("Клиент успешно создан!")
+            }
+            else{
+              document.getElementsByClassName('reg__next')[1].classList.add("danger")
+              this.errorCount = 0}
+              
+            
+          },
+          writeInput(e) {
+            this.formData[e.target.id].value = e.target.value;
+            this.id = e.target.id;
+            this.inputValidate(this.id);
+            
+          },
+          inputValidate(id) {
+            this.className = document.getElementById(id).className;
+
+            if (this.className === "Required") {
+              if(this.formData[id].value.length === 0){
+                this.formData[id].error[0] = true
+                document.getElementById(id).parentElement.dataset.after ="Это поле обязательно для заполнения"
+              }
+              else{
+                this.formData[id].error[0] = false
+              }
+              if (Boolean(this.formData[id].error[0])) {
+                document.getElementById(id).style.boxShadow =
+                  "0 0 5px rgba(243, 35, 35, 1)";
+                document.getElementById(id).style.border =
+                  "1px solid rgb(243, 35, 35)";
+                document
+                  .getElementById(id)
+                  .parentElement.classList.add("Error");
+              } 
+              else {
+                document.getElementById(id).style.boxShadow =
+                  "0 1px 0 rgba(0, 0, 0, 0.03)";
+                document.getElementById(id).style.border = "0";
+                document
+                  .getElementById(id)
+                  .parentElement.classList.remove("Error");
+              }
+            }
+            else if (this.className === "RequiredEqualFirstChar") {
+              document.getElementById(id).parentElement.dataset.after = ' ';
+              if(this.formData[id].value.length === 0){
+                this.formData[id].error[0] = true
+                document.getElementById(id).parentElement.dataset.after +="Это поле обязательно для заполнения \n"
+              }
+              else{
+                this.formData[id].error[0] = false
+              }
+              if(this.formData[id].value[0] != document.getElementById(id).dataset.char){
+                this.formData[id].error[1] = true
+                document.getElementById(id).parentElement.dataset.after += " Номер должен начинаться с " + document.getElementById(id).dataset.char + '\n'
+              }
+              else{
+                this.formData[id].error[1] = false
+              }
+              if(this.formData[id].value.length == document.getElementById(id).dataset.num){
+                this.formData[id].error[2] = false
+              }
+              else{
+                document.getElementById(id).parentElement.dataset.after += " Количество цифр должно быть " +document.getElementById(id).dataset.num;
+                this.formData[id].error[2] = true
+              }
+              if (
+                this.formData[id].error[0]||this.formData[id].error[1]||this.formData[id].error[2]
+              ) {
+                document.getElementById(id).style.boxShadow =
+                  "0 0 5px rgba(243, 35, 35, 1)";
+                document.getElementById(id).style.border =
+                  "1px solid rgb(243, 35, 35)";
+                  document
+                  .getElementById(id)
+                  .parentElement.classList.add("Error");
+              } else {
+                document.getElementById(id).style.boxShadow =
+                  "0 1px 0 rgba(0, 0, 0, 0.03)";
+                document.getElementById(id).style.border = "0";
+                document
+                  .getElementById(id)
+                  .parentElement.classList.remove("Error");
+              }
+            }
+            else if (this.className === "MaxNum") {
+              if(this.formData[id].value.length  > document.getElementById(id).dataset.num){
+                this.formData[id].error[0] = true
+                document.getElementById(id).parentElement.dataset.after = "Максимальное количество символов: " + document.getElementById(id).dataset.num
+              }
+              else{
+                this.formData[id].error[0] = false
+              }
+              if (this.formData[id].error[0]) {
+                document.getElementById(id).style.boxShadow =
+                  "0 0 5px rgba(243, 35, 35, 1)";
+                document.getElementById(id).style.border =
+                  "1px solid rgb(243, 35, 35)";document
+                  .getElementById(id)
+                  .parentElement.classList.add("Error");
+              } else {
+                document.getElementById(id).style.boxShadow =
+                  "0 1px 0 rgba(0, 0, 0, 0.03)";
+                document.getElementById(id).style.border = "0";document
+                  .getElementById(id)
+                  .parentElement.classList.remove("Error");
+              }
+            }
+              console.log(id +": "+ this.formData[id].error[0])       
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

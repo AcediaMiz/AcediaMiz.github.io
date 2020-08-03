@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="vue" class="game">
+      <div class="game__body">
+        <div
+          id="1"
+          @click="checkButtons($event)"
+          class="game__button game__button_1"
+        ></div>
+        <div
+          id="2"
+          @click="checkButtons($event)"
+          class="game__button game__button_2"
+        ></div>
+        <div
+          id="3"
+          @click="checkButtons($event)"
+          class="game__button game__button_3"
+        ></div>
+        <div
+          id="4"
+          @click="checkButtons($event)"
+          class="game__button game__button_4"
+        ></div>
+      </div>
+      <h2>Уровень:{{level}}</h2>
+      <div class="game__dif">
+        <h2>Уровень сложности</h2>
+        <label>
+          Легкий
+          <input
+            v-model="difficulty"
+            value="1500"
+            type="radio"
+            name="difficulty"
+          />
+        </label>
+        <label>
+          Средний
+          <input
+            v-model="difficulty"
+            value="1000"
+            type="radio"
+            name="difficulty"
+            id=""
+          />
+        </label>
+        <label>
+          Сложный
+          <input
+            v-model="difficulty"
+            value="400"
+            type="radio"
+            name="difficulty"
+            id=""
+          />
+        </label>
+      </div>
+      <button @click="generateGame()" class="game__start">
+        START
+      </button>
+      <h1 v-show="isEnd">
+        Вы проиграли!!!
+      </h1>
+    </div>
+    <script>
+      var vue = new Vue({
+        el: "#vue",
+        data: {
+          level: 0,
+          buttonList: [],
+          playerList: [],
+          i: 0,
+          id: "",
+          isEnd: false,
+          difficulty: "",
+        },
+        methods: {
+          getRandomInt: function () {
+            return Math.floor(Math.random() * 4 + 1);
+          },
+
+          generateGame() {
+            this.level = 0;
+            this.buttonList = [];
+            this.playerList = [];
+            this.startLevel();
+          },
+
+          startLevel() {
+            this.isEnd = false;
+
+            this.level++;
+            this.buttonList.push(this.getRandomInt());
+            console.log(this.buttonList);
+            setTimeout(() => {
+              this.animate(this.i);
+            }, 1000);
+            this.playerList = [];
+          },
+          resetLevel() {
+            this.level = 0;
+            this.buttonList = [];
+            this.playerList = [];
+          },
+          lightUp(id) {
+            document.getElementById(id).style.opacity = 1;
+            setTimeout(function () {
+              document.getElementById(id).style.opacity = 0.6;
+            }, 300);
+          },
+          playAudio(id) {
+            var myAudio = new Audio();
+
+            if (id == 1) {
+              myAudio.src = "/sounds/1.mp3";
+            } else if (id == 2) {
+              myAudio.src = "/sounds/2.mp3";
+            } else if (id == 3) {
+              myAudio.src = "/sounds/3.mp3";
+            } else if (id == 4) {
+              myAudio.src = "/sounds/4.mp3";
+            }
+            myAudio.play();
+          },
+          checkButtons(e) {
+            this.playAudio(e.target.id);
+            this.lightUp(e.target.id);
+            this.playerList.push(e.target.id);
+            console.log(e.target.id);
+            for (let i = 0; i < this.playerList.length; i++) {
+              if (this.playerList[i] != this.buttonList[i]) {
+                this.isEnd = true;
+                this.resetLevel();
+                console.log(this.isEnd);
+              }
+            }
+            if (
+              this.playerList.length === this.buttonList.length &&
+              this.buttonList.length != 0
+            ) {
+              this.startLevel();
+            }
+          },
+          //  set your counter to 1
+          animate(i) {
+            i = 0;
+            let active = () => {
+              console.log("i = " + i);
+              this.id = this.buttonList[i];
+              //  create a loop function
+              setTimeout(() => {
+                //  call a 3s setTimeout when the loop is called
+                this.lightUp(this.id);
+                this.playAudio(this.id); //  your code here
+                i++; //  increment the counter
+                if (i < this.buttonList.length) {
+                  //  if the counter < 10, call the loop function
+                  active(); //  ..  again which will trigger another
+                } //  ..  setTimeout()
+              }, this.difficulty);
+            };
+            active();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
