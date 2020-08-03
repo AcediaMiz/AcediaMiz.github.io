@@ -83,6 +83,8 @@
           id: "",
           isEnd: false,
           difficulty: 1500,
+          disableButtons: true,
+
         },
         methods: {
           getRandomInt: function () {
@@ -98,6 +100,7 @@
 
           startLevel() {
             this.isEnd = false;
+            this.disableButtons = true;
 
             this.level++;
             this.buttonList.push(this.getRandomInt());
@@ -133,40 +136,45 @@
             myAudio.play();
           },
           checkButtons(e) {
-            this.playAudio(e.target.id);
-            this.lightUp(e.target.id);
-            this.playerList.push(e.target.id);
-            console.log(e.target.id);
-            for (let i = 0; i < this.playerList.length; i++) {
-              if (this.playerList[i] != this.buttonList[i]) {
-                this.isEnd = true;
-                this.resetLevel();
-                console.log(this.isEnd);
+           
+            if (this.disableButtons === false) {
+              this.playAudio(e.target.id);
+              this.lightUp(e.target.id);
+              this.playerList.push(e.target.id);
+              console.log(e.target.id);
+              for (let i = 0; i < this.playerList.length; i++) {
+                if (this.playerList[i] != this.buttonList[i]) {
+                  this.isEnd = true;
+                  this.resetLevel();
+                  console.log(this.isEnd);
+                }
               }
-            }
-            if (
-              this.playerList.length === this.buttonList.length &&
-              this.buttonList.length != 0
-            ) {
-              this.startLevel();
+              if (
+                this.playerList.length === this.buttonList.length &&
+                this.buttonList.length != 0
+              ) {
+                this.startLevel();
+              }
+            } else {
             }
           },
-          //  set your counter to 1
+          
           animate(i) {
             i = 0;
             let active = () => {
               console.log("i = " + i);
               this.id = this.buttonList[i];
-              //  create a loop function
+              
               setTimeout(() => {
-                //  call a 3s setTimeout when the loop is called
+                
                 this.lightUp(this.id);
-                this.playAudio(this.id); //  your code here
-                i++; //  increment the counter
+                this.playAudio(this.id); 
+                i++; 
                 if (i < this.buttonList.length) {
-                  //  if the counter < 10, call the loop function
-                  active(); //  ..  again which will trigger another
-                } //  ..  setTimeout()
+                  
+                  active(); 
+                } else {
+                  this.disableButtons = false;
               }, this.difficulty);
             };
             active();
