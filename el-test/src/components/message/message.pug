@@ -1,0 +1,12 @@
+form.form__message.message(action='')
+  h2.form__title.message__title SEND US MESSAGE
+  label.message__text
+    | Full Name
+    input.message__name(type='text' name='name' placeholder='Your Name')
+  label.message__text
+    | Email
+    input.message__email(type='text' name='name' placeholder='Your Email')
+  label.message__text
+    | Message
+    textarea.message__textarea(name='message' cols='30' rows='10' placeholder='Your Message')
+  button.message__submit(type='submit') SUBMIT

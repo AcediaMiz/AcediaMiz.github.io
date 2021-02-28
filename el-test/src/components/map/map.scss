@@ -1,0 +1,7 @@
+.map {
+  width: 70%;
+  margin: 0 auto 96px auto;
+  @media (max-width: 610px) {
+    width: 100%;
+  }
+}

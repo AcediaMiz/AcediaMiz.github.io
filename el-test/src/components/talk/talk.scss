@@ -1,0 +1,46 @@
+.talk {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 100px;
+  // .talk__text
+
+  &__text {
+    max-width: 460px;
+  }
+
+  // .talk__title
+
+  &__title {
+    font-family: Gilroy;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+
+  // .talk__subtitle
+
+  &__subtitle {
+    font-family: Gilroy;
+    font-size: 16px;
+    opacity: 0.6;
+    color: white;
+  }
+
+  // .talk__btn
+
+  &__btn {
+    margin: 30px 0 0 30px;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    &__title,
+    &__subtitle {
+      text-align: center;
+    }
+    &__btn {
+      margin: 30px 0 0 0px;
+    }
+  }
+}
