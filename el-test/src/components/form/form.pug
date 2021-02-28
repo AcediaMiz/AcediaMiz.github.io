@@ -1,0 +1,18 @@
+section.form
+  .form__contact
+    img.form__img(src=require('../../assets/img/contact-img.svg').default alt='')
+    .form__text
+      h2.form__title ADDRESS
+      p.form__subtitle
+        | Id convallis placerat sit sed duis id amet volutpat quam a,
+        | pharetra.
+    .form__text
+      h2.form__title PHONE
+      p.form__subtitle.form__subtitle_phone +62-812-7313-4321
+      p.form__subtitle.form__subtitle_phone +62-817-000-1234
+    .form__text
+      h2.form__title ONLINE SERVICE
+      p.form__subtitle.form__subtitle_site www.afrianska.com
+      p.form__subtitle.form__subtitle_mail
+        | hello.afrian@gmail.com
+  include ../message/message.pug

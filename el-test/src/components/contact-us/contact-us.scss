@@ -1,0 +1,26 @@
+.contact-us {
+  background: url(./assets/img/back.svg) no-repeat center;
+  background-size: cover;
+
+  padding: 50px 25px;
+  // .contact-us__title
+
+  &__title {
+    font-family: Gilroy;
+    font-size: 44px;
+
+    text-align: center;
+
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  // .contact-us__subtitle
+
+  &__subtitle {
+    font-family: Gilroy;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+}

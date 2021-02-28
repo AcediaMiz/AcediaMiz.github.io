@@ -1,0 +1,89 @@
+.footer {
+  margin: 100px auto 0;
+  width: 80%;
+
+  // .footer__column
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .footer__title
+
+  &__title {
+    font-family: Gilroy;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    &_big {
+      font-family: Gilroy;
+      font-size: 28px;
+      margin: 0 0 10px 60px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("./assets/img/logo-v2.svg");
+        width: 48px;
+        height: 32px;
+        left: -60px;
+      }
+    }
+  }
+
+  // .footer__list
+
+  &__list {
+    list-style-type: none;
+    margin-top: 30px;
+  }
+
+  // .footer__item
+
+  &__item {
+    margin: 16px 0;
+  }
+
+  // .footer__text
+
+  &__text {
+    font-family: Gilroy;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: normal;
+    span {
+      font-weight: bold;
+      margin-right: 16px;
+    }
+  }
+
+  // .footer__link
+
+  &__link {
+    font-family: Gilroy;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    margin-top: 50px;
+    font-family: Gilroy;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.4;
+    font-weight: normal;
+  }
+  @media (max-width: 1100px) {
+    &__body {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__column {
+      margin-top: 30px;
+    }
+  }
+}
