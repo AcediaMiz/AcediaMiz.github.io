@@ -1,0 +1,597 @@
+body {
+    background-color: #dfded9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #dfded9;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    // .header__title
+    @media (max-width: 850px) {
+        max-width: 500px;
+    }
+    @media (max-width: 850px) {
+    }
+    &__title {
+        border-bottom: #51524d 3.5px solid;
+        font-size: 90px;
+        padding: 15px; /* НЕОЛОГИЗМЫ */
+
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 638;
+
+        line-height: 171px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        color: #1e1e1c;
+        @media (max-width: 850px) {
+            font-size: 60px;
+            line-height: 100px;
+        }
+    }
+
+    // .header__subtitle
+
+    &__subtitle {
+        /* НОВЫЕ ЯЗЫКОВЫЕ ЯВЛЕНИЯ В РУССКОМ ЯЗЫКЕ */
+
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 600;
+        padding: 40px;
+        font-size: 45px;
+        line-height: 70px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        color: #3c3c37;
+        border-bottom: #313332 8px solid;
+        @media (max-width: 850px) {
+            font-size: 30px;
+            padding: 10px;
+            line-height: 55px;
+        }
+    }
+}
+.intro {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    // .intro__lead
+    @media (max-width: 850px) {
+        max-width: 500px;
+    }
+    &__lead {
+        /* Отражение времени и пульс современности */
+
+        font-family: "Playfair Display";
+        font-style: italic;
+        font-weight: 600;
+        font-size: 25px;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 60px;
+        color: #656663;
+        @media (max-width: 850px) {
+            font-size: 20px;
+            padding: 20px;
+        }
+    }
+
+    // .intro__text
+
+    &__text {
+        /* Мы живём в эпоху стремительных изменений. Продолжительность существования модных тенденций сократилась до шести месяцев, медийные персоны появляются и исчезают из нашего информационного пространства, даже срок жизни мемов уменьшился до одной недели, а иногда и меньше. Скоротечность – это главное слово нашей действительности. Изменения проникают в каждую сферу нашей жизни. И язык является лакмусовой бумажкой для этих процессов. Именно он отражает реалии.  Современный русский язык – живой организм, который постоянно меняется и развивается. В нем регулярно появляются новые слова и выражения, которые обозначают новые явления, процессы и понятия. Эти новые языковые единицы называются неологизмами. */
+        margin: 50px 0;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+
+        font-size: 20px;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #656663;
+        & span {
+            font-weight: 700;
+            font-size: 30px;
+        }
+        @media (max-width: 850px) {
+            margin: 10px;
+        }
+        // .intro__text_neo
+
+        &_neo {
+            /* Неологизмы – это не просто новые слова, это отражение времени, культуры и общества. Они помогают нам лучше понимать мир вокруг нас, адаптироваться к новым условиям и развиваться вместе с языком. */
+
+            font-family: "Source Serif Pro";
+            font-style: normal;
+            font-weight: bolder;
+            font-size: 30px;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #313332;
+            @media (max-width: 850px) {
+                font-size: 17px;
+            }
+        }
+
+        // .intro__text_goal
+
+        &_goal {
+        }
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+}
+.parts {
+    max-width: 768px;
+    @media (max-width: 850px) {
+        max-width: 500px;
+    }
+}
+.part-one {
+    margin: 30px 0 50px 0;
+    @media (max-width: 850px) {
+        margin: 20px 0;
+    }
+    // .part-one__title
+
+    &__title {
+        /* НЕОЛОГИЗМЫ */
+        margin: 0;
+        padding: 50px 0;
+        border-bottom: #313332 8px solid;
+        border-top: #313332 8px solid;
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 85px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #3c3c37;
+        @media (max-width: 850px) {
+            font-size: 40px;
+            padding: 10px;
+        }
+    }
+
+    // .part-one__subtitle
+
+    &__subtitle {
+        margin: 50px 0;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        padding: 0 60px;
+        font-size: 20px;
+        text-align: justify;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #656663;
+        & span {
+            font-weight: 700;
+            font-size: 30px;
+            @media (max-width: 850px) {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+
+    // .part-one__text
+
+    &__text {
+        padding: 0 60px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        text-align: justify;
+        &_bold {
+            font-family: "Source Serif Pro";
+            font-style: normal;
+            font-weight: bolder;
+            font-size: 30px;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #313332;
+            @media (max-width: 850px) {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+
+    // .part-one__table
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    // .part-one__table-title
+
+    &__table-title {
+        padding: 20px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+
+    // .part-one__table-section
+
+    &__table-section {
+        display: flex;
+        // .part-one__table-section_title
+        &_1 {
+            /* Rectangle 2 */
+            padding: 20px;
+            box-sizing: border-box;
+
+            border: 2px solid #656663;
+            border-radius: 10px;
+            margin: 10px;
+            @media (max-width: 850px) {
+                font-size: 15px;
+            }
+        }
+
+        // .paer-one__table-section_2
+
+        &_2 {
+            padding: 20px;
+            margin: 10px;
+            /* Rectangle 2 */
+
+            box-sizing: border-box;
+
+            border: 2px solid #656663;
+            border-radius: 10px;
+            @media (max-width: 850px) {
+                font-size: 15px;
+            }
+        }
+        &_title {
+            font-family: "Source Serif Pro";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            color: #313332;
+            @media (max-width: 850px) {
+                font-size: 20px;
+            }
+        }
+
+        // .part-one__table-section_text
+
+        &_text {
+            /* Образуются путем создания новых слов на основе существующих или путем заимствования из других языков. Например, всем нам занакомое и привычное слово “гаджет” - это заимствование из английского языка. Или популярный во время пандемии COVID-19 неологизм “самоизоляция”. */
+            margin: 0;
+            padding: 0;
+            font-family: "Source Serif Pro";
+            font-style: normal;
+            font-size: 20px;
+            text-align: center;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #656663;
+            text-align: justify;
+            @media (max-width: 850px) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.part-two {
+    // .part-two__title
+
+    &__title {
+        margin: 0;
+        padding: 50px 0;
+        border-bottom: #313332 8px solid;
+        border-top: #313332 8px solid;
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 85px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #3c3c37;
+        @media (max-width: 850px) {
+            font-size: 40px;
+            padding: 10px;
+        }
+    }
+
+    // .part-two__subtitle
+
+    &__subtitle {
+        padding: 0 60px;
+        margin: 50px 0px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        @media (max-width: 850px) {
+            font-size: 15px;
+            margin: 10px;
+        }
+
+        & span {
+            font-weight: 700;
+            font-size: 30px;
+            @media (max-width: 850px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // .part-two__text
+
+    &__text {
+        padding: 0 60px;
+        margin: 20px 0px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        text-align: justify;
+        & span {
+            font-weight: 700;
+        }
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+
+    // .part-two__timeline
+
+    &__timeline {
+        padding: 30px 0;
+        & img {
+            max-width: 768px;
+            @media (max-width: 850px) {
+                max-width: 500px;
+                padding: 20px 0;
+            }
+        }
+    }
+
+    // .part-two__slider
+
+    &__slider {
+    }
+}
+
+.part-three {
+    // .part-three__title
+
+    &__title {
+        margin: 50px 0;
+        padding: 50px 0;
+        border-bottom: #313332 8px solid;
+        border-top: #313332 8px solid;
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 85px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #3c3c37;
+        @media (max-width: 850px) {
+            font-size: 40px;
+            padding: 10px;
+        }
+    }
+
+    // .part-three__text
+
+    &__text {
+        padding: 0 60px;
+        margin: 20px 0px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        @media (max-width: 850px) {
+            font-size: 15px;
+        }
+    }
+
+    // .part-three__test
+
+    &__test {
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+    }
+}
+.bold-text {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 30px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #313332;
+    margin: 20px 20px 40px 20px;
+    @media (max-width: 850px) {
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+.line {
+    margin: 60px 80px 0 80px;
+    border-bottom: #51524d 3.5px solid;
+    @media (max-width: 850px) {
+        margin: 30px;
+    }
+}
+.conc {
+    border-top: #313332 8px solid;
+    margin: 20px 50px 50px 50px;
+    max-width: 768px;
+    padding-top: 40px;
+    @media (max-width: 850px) {
+        max-width: 500px;
+        margin: 20px 0;
+        padding: 0;
+    }
+    // .conc__text
+
+    &__text {
+        padding: 0 60px;
+        margin: 20px 0px;
+        font-family: "Source Serif Pro";
+        font-style: normal;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #656663;
+        & span {
+            font-weight: 700;
+            font-size: 30px;
+            @media (max-width: 850px) {
+                font-size: 20px;
+            }
+        }
+        &.bold-text {
+            font-family: "Source Serif Pro";
+            font-style: normal;
+            font-weight: bolder;
+            font-size: 24px;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #313332;
+            margin: 60px 20px 40px 20px;
+            @media (max-width: 850px) {
+                font-size: 19px;
+            }
+        }
+        @media (max-width: 850px) {
+            font-size: 15px;
+            padding: 20px;
+            margin: 0;
+        }
+    }
+}
+.footer {
+    width: 100%;
+    background: #313332;
+    height: 150px;
+}
+[data-text] {
+    position: relative; /* Относительное позиционирование */
+    color: #934343;
+}
+[data-text]::after {
+    /* Футуристы - представители авангардного художественного и литературного течения начала XX века */
+
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #d9d9d9;
+
+    content: attr(data-text); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 500px; /* Ширина подсказки */
+    left: -100%;
+    top: -100px; /* Положение подсказки */
+    background: #934343; /* Синий цвет фона */
+
+    padding: 15px; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 0.3s; /* Время появления подсказки */
+}
+[data-text]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+}
+.swiper {
+    width: 600px;
+    height: 300px;
+    @media (max-width: 850px) {
+        width: 450px;
+        height: 125px;
+    }
+}
+.swiper-slide {
+    & img {
+        width: 90%;
+        height: 90%;
+        object-fit: scale-down;
+    }
+}
