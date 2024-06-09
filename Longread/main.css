@@ -732,7 +732,7 @@ body {
     text-align: justify;
     font-weight: normal;
     text-transform: uppercase;
-    color: #656663;
+    color: #dfded9;;
     @media(max-width: 850px) {
         .header {
             max-width: 500px;
