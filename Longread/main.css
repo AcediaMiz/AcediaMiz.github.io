@@ -718,7 +718,32 @@ body {
 .footer {
     width: 100%;
     background: #313332;
-    height: 150px
+    height: 150px;
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    
+}
+.credits{
+    font-weight: 400;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #656663;
+    @media(max-width: 850px) {
+        .header {
+            max-width: 500px;
+        }
+    }
+    
+    @media(max-width: 550px) {
+        .header {
+            max-width: 350px;
+        }
+    }
 }
 
 [data-text] {
