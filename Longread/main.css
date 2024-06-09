@@ -466,9 +466,12 @@ body {
 }
 
 .part-two__text a {
-    color: #934343
+    
 }
-
+.ref{
+    color: #934343
+    
+}
 .part-two__text span {
     font-weight: 700
 }
