@@ -802,4 +802,11 @@ body {
 }
 .ans{
     font-weight: 400;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #656663
 }
