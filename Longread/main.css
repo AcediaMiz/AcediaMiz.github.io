@@ -682,7 +682,8 @@ body {
 
 [data-text] {
     position: relative;
-    color: #934343
+    color: #934343;
+    text-decoration: underline;
 }
 
 [data-text]::after {
