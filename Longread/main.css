@@ -9,7 +9,7 @@ body {
 :root {
     scroll-behavior: smooth;
 }
-
+.graf{width: 100%;}
 .menu {
     background-color: #cac9c5;
     position: fixed;
