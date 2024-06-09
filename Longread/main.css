@@ -6,7 +6,48 @@ body {
     margin: 0;
     padding: 0
 }
+:root {
+    scroll-behavior: smooth;
+}
 
+.menu {
+    background-color: #cac9c5;
+    position: fixed;
+    border-bottom: #51524d 3.5px solid;
+    transition: ease 0.2s;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        & li {
+            margin: 10px;
+            list-style-type: none;
+            & a {
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: bolder;
+
+                font-size: 20px;
+
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+                color: #3c3c37;
+                @media (max-width: 850px) {
+                    font-size: 15px;
+                }
+                @media (max-width: 550px) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
 .header {
     background-color: #dfded9;
     max-width: 768px;
