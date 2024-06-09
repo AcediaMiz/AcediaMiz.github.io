@@ -733,20 +733,20 @@ body {
     text-align: justify;
     font-weight: normal;
     text-transform: uppercase;
-    color: #dfded9;;
-    @media(max-width: 850px) {
-        .header {
-            max-width: 500px;
-        }
-    }
+    color: #dfded9;
     
-    @media(max-width: 550px) {
-        .header {
-            max-width: 350px;
-        }
+    
+}
+@media(max-width: 850px) {
+    .credits {
+        max-width: 500px;
     }
 }
-
+@media(max-width: 550px) {
+    .credits {
+        max-width: 350px;
+    }
+}
 [data-text] {
     position: relative;
     color: #934343;
